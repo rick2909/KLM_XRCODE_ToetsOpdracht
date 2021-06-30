@@ -11,7 +11,7 @@ public class GameManager : MonoBehaviour{
     public GameObject planeObject;
     public Plane[] planeInfo;
 
-    private int spawnAmount = 3;
+    private int spawnAmount;
 
     private int stopsAmount = 4;
 
@@ -23,6 +23,9 @@ public class GameManager : MonoBehaviour{
     // Start is called before the first frame update
     void Start()
     {
+        // set amount of planes
+        spawnAmount = planeInfo.Length;
+
         // set spawn and hanners to list so they can be randomly assigned to planes
         List<Transform> spawns = new List<Transform>(outsideStops);
         List<GameObject> hangers = new List<GameObject>(hangerPostions);
