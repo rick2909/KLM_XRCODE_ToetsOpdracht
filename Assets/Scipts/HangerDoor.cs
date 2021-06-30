@@ -8,12 +8,10 @@ public class HangerDoor : MonoBehaviour
 {
     public int id;
     Animator animator;
-    bool doorOpen;
 
     // Use this for initialization
     private void Start () {
         animator = GetComponent<Animator>();
-        doorOpen = false;
         GameEvents.current.onHangerDoorTriggerEnter += OnHangerOpen;
         GameEvents.current.onHangerDoorTriggerExit += OnHangerClose;
     }
